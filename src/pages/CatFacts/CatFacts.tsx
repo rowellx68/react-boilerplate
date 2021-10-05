@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { getCatFact, ICatFact } from 'services/example-cat-service';
 
-import css from './styles.module.scss';
+import './styles.scss';
 
 const CatFactsPage: React.FC = () => {
   const [factData, setFact] = useState<ICatFact>();
@@ -20,7 +20,7 @@ const CatFactsPage: React.FC = () => {
     <h1>Cat Fact</h1>
 
     {/* since factData can be undefined, we need to use ? to ensure we only render the text when factData isn't undefined */}
-    <p className={css.p}>{factData?.fact}</p>
+    <p className="cat-fact--paragraph">{factData?.fact}</p>
 
     <button onClick={() => getFact()}>
       Get new fact

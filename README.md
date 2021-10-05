@@ -4,7 +4,14 @@ This boilerplate was generated using [vitejs](https://vitejs.dev/) instead of [C
 
 ## CSS
 
-You can add SCSS via `index.scss` or import them in your `.tsx` files as CSS Modules. Have a look at `src/pages/CatFacts` for an example of using [CSS modules](https://css-tricks.com/css-modules-part-1-need/).
+You can add global styles via `src/styles/index.scss` or import them in your `.tsx` files. Have a look at `src/pages/CatFacts` for an example of how you could do this.
+
+If using a CSS framework, you can `@import` them in `src/styles/index.scss`. Below is an example of how you might import Bootstrap.
+
+```scss
+@import "./variables";
+@import "../../node_modules/bootstrap/scss/boostrap";
+```
 
 ## API
 
